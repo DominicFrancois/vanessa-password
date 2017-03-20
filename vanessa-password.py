@@ -1,8 +1,8 @@
 import string
 from random import sample, choice
 
-chars = string.ascii_letters + string.digits
-lenght = 10
+chars = string.ascii_letters + string.digits + string.punctuation
+lenght = 40
 gen = ''.join(choice(chars) for _ in range(lenght))       
 plog = 'plog.txt'
 
