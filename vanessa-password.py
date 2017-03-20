@@ -1,11 +1,12 @@
-#Password Generator
-import string, random
+import string
+from random import sample, choice
 
-#Password lenght
-pl = 15 
+chars = string.ascii_letters + string.digits
+lenght = 20
+gen = ''.join(choice(chars) for _ in range(lenght))       
+plog = 'plog.txt'
 
-#Accepted password characters
-pc = string.printable[0:63]
+with open(plog, 'a') as out:
+    out.write(gen + '\n')
 
-
-print(*random.sample(pc,pl), sep='')
+print("Password generated")
